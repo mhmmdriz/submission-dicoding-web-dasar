@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark {
+  background-color: #142a3c;
+  color: white;
+}
+
+h2 {
+  margin: 0;
+}
+
+header {
+  display: inline;
+}
+
+nav {
+  background-color: #52b4ed;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-transparent {
+  background-color: rgba(82, 180, 237, 0.8);
+}
+
+nav h1 {
+  /* margin: 0; */
+  padding-inline: 2rem;
+}
+
+nav h1 a {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+nav ul {
+  padding-inline: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+nav li button {
+  color: white;
+  background-color: #377fa8;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+aside {
+  flex: 1;
+}
+
+aside figure {
+  margin: 0;
+}
+
+aside figure img {
+  width: 100%;
+  height: auto;
+  max-height: 465px;
+}
+
+table th {
+  text-align: left;
+}
+
+.card {
+  box-shadow: 0 2px 5px 2px #52b4ed;
+  border-radius: 10px;
+  border: 1px solid #52b4ed;
+  padding: 20px;
+}
+
+#content {
+  flex: 4;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+#content .card {
+  padding: 0px;
+}
+
+#content .card h2 {
+  margin-top: 0;
+  padding: 10px 20px; 
+  text-align: center;
+  color: white;
+  background-color: #52b4ed;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#content .card p {
+  margin: 30px;
+  text-align: justify;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin: 30px;
+}
+
+.inner-card {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #52b4ed;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.inner-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+#episodes .flex-container .inner-card {
+  width: 400px;
+}
+
+#episodes .flex-container .inner-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#opening, #ending{
+  margin: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#opening h3, #ending h3{
+  margin-top: 0;
+}
+
+#opening img, #ending img {
+  width: 100%;
+  height: auto;
+}
+
+#ending .flex-container {
+  gap: 3rem;
+  margin: 0;
+}
+
+footer {
+  background-color: #52b4ed;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.hidden {
+    display: none;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  #hamburger-menu {
+    display: flex;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    padding-inline: 2rem;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  nav h1 {
+    width: 50%;
+    text-align: center;
+    padding-inline: 20px;
+  }
+
+  nav h1 a {
+    padding: 0;
+  }
+
+  nav h1 a, #hamburger-menu {
+    font-size: 20px;
+  }
+}
