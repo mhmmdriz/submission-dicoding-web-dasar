@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
